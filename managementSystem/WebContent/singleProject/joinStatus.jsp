@@ -19,6 +19,7 @@
 <script>
 	function loginU(frm){
 		if(confirm("학생 유형으로 가입하시겠습니까?")){
+			document.getElementById('flg').value = "U";
 			frm.submit();
 			return;
 	    } else {

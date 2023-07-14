@@ -53,7 +53,7 @@
 	}
 
 	function aInfo(){
-		location.href="user.jsp";
+		location.href="userStatus.jsp";
 	}
 
 	function info(){
