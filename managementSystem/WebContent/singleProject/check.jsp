@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="returnLoading.js"></script>
 </head>
 <body>
 	<%@ include file="mySqlDB.jsp"%>
@@ -46,19 +47,11 @@
 		<%
 			}
 				
-		}catch(SQLException e){
+		} catch(SQLException e){
 			out.println(e.getMessage());
 		}
 	%>
 		<input type="button" onclick="checking('<%= str %>')" value="확인">
 	</form>
-</body>
-</html>
-<script>
-	function checking(str){
-		window.opener.getReturn(document.checked.flg.value, str);
-		window.close();
-	}
-</script>
 </body>
 </html>

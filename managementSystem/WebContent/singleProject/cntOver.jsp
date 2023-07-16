@@ -10,10 +10,8 @@
 <body>
 	<form>
 		<%
-			out.println("정보가 없는 아이디입니다. 회원가입 하시겠습니까?");
+			out.println("로그인을 5회 이상 시도하셨습니다. 관리자에게 문의해주세요.");
 		%>
-		<input type="button" name="login" value="뒤로가기" onclick="back()" />
-		<input type="button" name="join" value="회원가입" onclick="goJoin()" />
 		<input type="button" name="main" value="홈페이지" onclick="goMain()" />
 	</form>
 </body>

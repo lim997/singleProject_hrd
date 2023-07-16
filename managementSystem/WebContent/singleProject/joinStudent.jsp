@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>회원가입</title>
 <script src="joinScript.js"></script>
-<script src="../js/code.jquery.com_jquery-3.7.0.min.js"></script>
+<script src="code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
 <body>
 	<%
@@ -38,7 +38,7 @@
 		            </li>
 		            <li>
 		            	<label class="li_label" for="phone">핸드폰번호</label>
-		            	<input class="txt_input" type="text" maxlength="11" id="phone" name="phone" placeholder="'-'을 제외한 10자리 숫자를 입력해주세요." required>
+		            	<input class="txt_input" type="text" maxlength="11" id="phone" name="phone" placeholder="'-'을 제외한 11자리 숫자를 입력해주세요." required>
 		            	<input type="button" onclick="phCheck();" value="핸드폰번호 중복체크">  
 		            </li>
 		            <li>
@@ -46,13 +46,13 @@
               			<input class="txt_input" type="email" maxlength="30" id="uEmail" name="uEmail" required>
               			<input type="button" onclick="emCheck();" value="이메일 중복체크"> 
             		</li>
+					<li>
+		            	<label class="li_label" for="addr">주소</label>
+		            	<input class="txt_input" type="text" maxlength="50" id="addr" name="addr" required> 
+		            </li>
             		<li>
 		            	<label class="li_label" for="birth">생년월일</label>
 		            	<input class="txt_input" type="date" id="birth" name="birth" required> 
-		            </li>
-		            <li>
-		            	<label class="li_label" for="addr">주소</label>
-		            	<input class="txt_input" type="text" maxlength="50" id="addr" name="addr" required> 
 		            </li>
 		            <li>
 		              	<label class="li_label" for="education">최종학력</label>

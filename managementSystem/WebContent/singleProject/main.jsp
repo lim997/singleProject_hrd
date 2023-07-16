@@ -5,9 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>직업훈련포털사이트</title>
+<script src="returnLoading.js"></script>
 </head>
 <body>
-	<%@ include file="mySqlDB.jsp"%>
 	<form action="" name="mainForm" method="post">
 		<%
 			String logCheck = "";
@@ -29,11 +29,16 @@
 			<% } else if(stat.equals("A")){ %>			
 				<input type="button" name="userInfo" value="회원정보확인" onclick="aInfo()" />
 			<% } else { %>
-				<input type="button" name="uInfo" value="개인정보확인" onclick="info()" />
-			<% } %>
+				<input type="button" name="uInfo" value="개인정보확인" onclick="info(this.form)" />
+			<% } 
+			
+			   if(stat.equals("U")){ %>		
+				<input type="button" name="uClas" value="수강신청내역" onclick="uClass()" />
+			<% } else if(stat.equals("T")){ %>
+				<input type="button" name="tClas" value="훈련관리" onclick="tClass()" />
+			<% }%>
 		</div>
 		<input type="button" name="claSearch" value="훈련과정찾기" onclick="search()" />
-		<input type="button" name="myClas" value="수강신청내역" onclick="myClass()" />
 	</form>
 </body>
 </html>
@@ -56,18 +61,21 @@
 		location.href="userStatus.jsp";
 	}
 
-	function info(){
-		location.href="information.jsp";
+	function info(frm){
+		frm.action="information.jsp";
+		frm.submit();
+		return;
 	}
 
 	function search(){
 		location.href="classSearch.jsp";
 	}
 
-	function myClass(){
-		location.href="stuClassList.jsp";
+	function uClass(){
+		location.href="uClassList.jsp";
 	}
-	function getReturn(){
-		location.reload();
+	
+	function tClass(){
+		location.href="tClassList.jsp";
 	}
 </script>

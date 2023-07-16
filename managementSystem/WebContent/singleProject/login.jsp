@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
+<script src="backLogMain.js"></script>
 <style>
 html,
 body {
@@ -62,30 +63,25 @@ body {
 </style>
 </head>
 <body>
-	<%@ include file="mySqlDB.jsp"%>
-
 	<form action="loginCheck.jsp" name="login" method="post">
 		<div class="tab-area">
-		    <input type="radio" name="stat" id="student" value="U" checked>
+		<%
+			String status[] = {"U","T","A"};
+		%>
+		
+		    <input type="radio" name="stat" id="student" value="<%= status[0] %>" checked>
 	        <label for="student">학생</label>
-	        <input type="radio" name="stat" id="training" value="T">
+	        <input type="radio" name="stat" id="training" value="<%= status[1] %>">
 	        <label for="training">훈련기관</label>
-	        <input type="radio" name="stat" id="admin" value="A"/>
+	        <input type="radio" name="stat" id="admin" value="<%= status[2] %>"/>
 	        <label for="admin">관리자</label>
 	        
-	        
-			<div id="contentU" class="tab-content">
-		        <input type="text" maxlength="10" name="uIdU" placeholder="아이디"/>
-				<input type="password" maxlength="20" name="uPwdU" placeholder="비밀번호"/>
+	     <% for(int i=0;i<status.length;i++){ %>
+			<div id="content<%= status[i] %>" class="tab-content">
+		        <input type="text" maxlength="10" name="uId<%= status[i] %>" placeholder="아이디"/>
+				<input type="password" maxlength="20" name="uPwd<%= status[i] %>" placeholder="비밀번호"/>
 	        </div>
-	       	<div id="contentT" class="tab-content">
-		        <input type="text" maxlength="10" name="uIdT" placeholder="아이디"/>
-				<input type="password" maxlength="20" name="uPwdT" placeholder="비밀번호"/>
-	        </div>
-	        <div id="contentA" class="tab-content">
-		        <input type="text" maxlength="10" name="uIdA" placeholder="아이디"/>
-				<input type="password" maxlength="20" name="uPwdA" placeholder="비밀번호"/>
-	        </div>
+	     <% } %>
         </div>
 		<div>
 			<input type="button" onclick="userLogin(this.form)" value="로그인">
@@ -98,9 +94,5 @@ body {
 	function userLogin(frm) {
 		frm.submit();
 		return true;
-	}
-
-	function back() {
-		history.back();
 	}
 </script>

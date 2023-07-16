@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="goLogMain.js"></script>
+<script src="backLogMain.js"></script>
 </head>
 <body>
 	<%@ include file="mySqlDB.jsp"%>
@@ -39,7 +39,7 @@
 				}
 				stmt.executeUpdate(sql);
 				out.println(uName + "님 가입을 축하드립니다!");
-			}catch(SQLException e){
+			} catch(SQLException e){
 				out.println(e.getMessage());
 			}
 		%>

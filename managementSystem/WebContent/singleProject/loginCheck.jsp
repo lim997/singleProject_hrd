@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="backLogMain.js"></script>
 </head>
 <body>
 	<%@ include file="mySqlDB.jsp"%>
@@ -34,9 +35,9 @@
 				rs = stmt.executeQuery(sql);
 				if(rs.next()){
 					if(rs.getString("BANYN").equals("Y")){
-						out.println("정지된 회원입니다. 매너를 지키세요.");
+						response.sendRedirect("stop.jsp");
 					} else if(rs.getInt("LOGIN_CNT") >= 5){
-						out.println("로그인을 5회 이상 시도하셨습니다. 관리자에게 문의해주세요.");
+						response.sendRedirect("cntOver.jsp");
 					} else{
 						session.setAttribute("u_id", rs.getString("U_ID"));
 						session.setAttribute("u_name", rs.getString("U_NAME"));
@@ -48,12 +49,14 @@
 						response.sendRedirect("main.jsp");
 					}
 				} else {
-					sql = "SELECT * FROM JYR_TBL_USER WHERE U_ID = '" + uId + "'";
+					sql = "SELECT * FROM JYR_TBL_USER WHERE U_ID = '" + uId + "' AND STATUS = '" + stat + "'";
 					rs = stmt.executeQuery(sql);
 					
 					if(rs.next()){
-						if(rs.getInt("LOGIN_CNT") >= 5){
-							out.println("로그인을 5회 이상 시도하셨습니다. 관리자에게 문의해주세요.");
+						if(rs.getString("BANYN").equals("Y")){
+							response.sendRedirect("stop.jsp");
+						}else if(rs.getInt("LOGIN_CNT") >= 5){
+							response.sendRedirect("cntOver.jsp");
 							return;
 						} else {
 							response.sendRedirect("find.jsp");
@@ -69,16 +72,6 @@
 			}
 		%>
 	</form>
-	<input type="button" onclick="back()" value="되돌아가기">
+	<input type="button" onclick="back()" value="뒤로가기">
 </body>
 </html>
-<script>
-	function userLogin(frm) {
-		frm.submit();
-		return true;
-	}
-
-	function back() {
-		history.back();
-	}
-</script>

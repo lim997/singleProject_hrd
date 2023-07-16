@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>가입권한설정</title>
+<script src="backLogMain.js"></script>
 </head>
 <body>
 	<form action="joinStudent.jsp" name="statForm" method="post">
@@ -36,8 +37,5 @@
 	    } else {
 	    	alert("취소 되었습니다.");
 	    }
-	}
-	function back(){
-		history.back();
 	}
 </script>

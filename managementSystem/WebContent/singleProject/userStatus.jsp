@@ -28,8 +28,7 @@
 		frm.submit();
 		return;
 	}
-	
 	function back(){
-		history.back();
+		location.href="main.jsp";
 	}
 </script>
