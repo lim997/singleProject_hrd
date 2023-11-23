@@ -55,49 +55,49 @@
 
 1. 메인화면
    
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/01main.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/01main.png"/>
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/01main_status.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/01main_status.png"/>
 
 2. 로그인
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/02login.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/02login.png"/>
 
 3. 회원가입
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/03join.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/03join.png"/>
 
 4. 마이페이지: 정보 관리
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/04edit.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/04edit.png"/>
 
 5. 수강 신청 목록 조회
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/05user_class_list.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/05user_class_list.png"/>
 
 6. 훈련 강의 관리
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/06class_edit.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/06class_edit.png"/>
 
 7. 훈련별 수강 학생 목록 관리
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/07class_student_list.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/07class_student_list.png"/>
 
 8. 회원 관리
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/08user.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/08user.png"/>
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/08user_list.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/08user_list.png"/>
 
 9. 훈련 목록 조회 및 검색
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/09class_list.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/09class_list.png"/>
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/09class_list_search.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/09class_list_search.png"/>
 
 10. 훈련 상세 정보
 
-<img width="60%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/10class_details.png"/>
+<img width="80%" src="https://github.com/lim997/singleProject_hrd/blob/main/images/10class_details.png"/>
 
 
 # 자체 평가
